@@ -48,6 +48,10 @@ func _physics_process(delta):
 	vertical_velocity += verticalGravityMultiplier * delta * Vector3.DOWN
 	vertical_velocity = move_and_slide_with_snap(vertical_velocity, Vector3.ZERO, Vector3.UP, true)
 	
+	if (is_on_floor()):
+		vertical_velocity = Vector3.ZERO
+		
+
 	#BUTTON INPUTS
 	
 	if Input.is_action_pressed("lookUpP1"):
@@ -62,6 +66,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("lookRightP1"):
 		var lookIntensity = Input.get_action_strength("lookRightP1")
 		rotate_y(lookIntensity * camYSens * -1)
+		
 	var camera_rot = $HeadHitbox/Camera.rotation_degrees
 	camera_rot.x = clamp(camera_rot.x,  (AngleOfFreedom * -1) - 90, AngleOfFreedom - 90)
 	$HeadHitbox/Camera.rotation_degrees = camera_rot

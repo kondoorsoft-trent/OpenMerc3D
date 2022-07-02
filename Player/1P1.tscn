@@ -7,7 +7,7 @@
 [ext_resource path="res://Player/HUD/HealthBar.png" type="Texture" id=5]
 [ext_resource path="res://Player/1P1.gd" type="Script" id=6]
 [ext_resource path="res://Player/HUD/Crosshair1.png" type="Texture" id=7]
-[ext_resource path="res://Player/HUD/GunSprites.png" type="Texture" id=8]
+[ext_resource path="res://Player/HUD/GunSprites2.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 0.01
@@ -278,11 +278,11 @@ texture = ExtResource( 3 )
 hframes = 6
 
 [node name="GunSwitchable" type="Sprite" parent="HUD"]
-position = Vector2( 1606, 708 )
+position = Vector2( 1467, 634 )
 texture = ExtResource( 8 )
-hframes = 7
+hframes = 8
 vframes = 4
-frame = 21
+frame = 24
 
 [node name="Helmet" type="Sprite" parent="HUD"]
 modulate = Color( 1, 1, 1, 0.54902 )

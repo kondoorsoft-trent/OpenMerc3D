@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Weapons/PulseRifle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Weapons/Sniper.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Weapons/Pistol.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Weapons/DB Shotgun.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Weapons/Pump Shotgun.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -35,3 +36,6 @@ transform = Transform( 0.700336, 0, -0.713813, 0, 1, 0, 0.713813, 0, 0.700336, 3
 
 [node name="Sniper" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.633043, 0, -0.774117, 0, 1, 0, 0.774117, 0, 0.633043, 5.536, -2.605, -5.302 )
+
+[node name="PumpShotgun" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.734915, 0, 0.67816, 0, 1, 0, -0.67816, 0, 0.734915, 12.7225, -1.75415, -12.38 )

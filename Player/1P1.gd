@@ -12,10 +12,6 @@ onready var healthText = $HUD/HealthCurrent #TODO
 onready var areaText = $HUD/AreaLabel #TODO
 onready var gunSprite = $HUD/Gun #TODO
 onready var AngleOfFreedom = 80
-onready var jumpTimer = 0
-onready var isJumping = false
-onready var isDelayingJump = false
-onready var jumpDelayTimer = 0
 var camXSens = .1
 var camYSens = .1
 var moveSpeedDefault = 10
@@ -23,9 +19,11 @@ var moveSpeed = 10
 var fov = 90
 var viewDistanceNear = 0.05
 var viewDistanceFar = 100
+var verticalGravityMultiplier = 40
+var jump_speed = 15
 
 onready var gameFeed = $CanvasLayer/Control/GameFeed
-var gravity = Vector3(0,-100,0)
+var vertical_velocity = Vector3.DOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,27 +37,10 @@ func _physics_process(delta):
 	velocity.x = velocity3D.x
 	velocity.y = velocity3D.z
 	move_and_collide(Vector3(velocity.x, 0, velocity.y) * moveSpeed * delta)
-	if isJumping == false:
-		move_and_slide_with_snap(gravity * delta, Vector3(0, 0, 0), Vector3(0, 1, 0), true)
-	elif jumpTimer < 5:
-		move_and_slide_with_snap(Vector3(0,2000,0) * delta, Vector3(0, 0, 0), Vector3(0, 1, 0), true)
-		jumpTimer += 1
-		
-	if !is_on_floor():
-		gravity.y -= 50
-	if is_on_floor():
-		gravity.y = -100
-	if jumpTimer >= 5:
-		isJumping = false
-		jumpTimer = 0
-		isDelayingJump = true
-		
-	if isDelayingJump == true && jumpDelayTimer < 30:
-		jumpDelayTimer +=1
-	elif isDelayingJump == true && jumpDelayTimer >= 30:
-		jumpDelayTimer = 0
-		isDelayingJump = false
-	
+
+	# fall
+	vertical_velocity += verticalGravityMultiplier * delta * Vector3.DOWN
+	vertical_velocity = move_and_slide_with_snap(vertical_velocity, Vector3.ZERO, Vector3.UP, true)
 	
 	#BUTTON INPUTS
 	
@@ -80,10 +61,8 @@ func _physics_process(delta):
 	$HeadHitbox/Camera.rotation_degrees = camera_rot
 	
 	
-	
-	if Input.is_action_pressed("jumpP1") && is_on_floor() && isDelayingJump == false:
-		isJumping = true
-		jumpTimer = 0
+	if Input.is_action_pressed("jumpP1") && is_on_floor():
+		vertical_velocity = jump_speed * Vector3.UP
 		
 	if Input.is_action_just_pressed("crouchP1"):
 		$HeadHitbox.translation.y -= .75

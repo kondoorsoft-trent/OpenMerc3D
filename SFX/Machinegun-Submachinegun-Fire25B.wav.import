@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Machinegun-Submachinegun-Fire25B.wav-91122664e00c068c64a4702f60d4d8d1.sample"
+
+[deps]
+
+source_file="res://SFX/Machinegun-Submachinegun-Fire25B.wav"
+dest_files=[ "res://.import/Machinegun-Submachinegun-Fire25B.wav-91122664e00c068c64a4702f60d4d8d1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

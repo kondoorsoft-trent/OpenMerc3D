@@ -1,23 +1,27 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://SFX/Gun-Drop29.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/HUD/HelmetOutline.png" type="Texture" id=2]
 [ext_resource path="res://Player/HUD/P1Gun01.png" type="Texture" id=3]
-[ext_resource path="res://SFX/Machinegun-Submachinegun-Fire17B.wav" type="AudioStream" id=4]
+[ext_resource path="res://SFX/Pistol 3.wav" type="AudioStream" id=4]
 [ext_resource path="res://Player/HUD/HealthBar.png" type="Texture" id=5]
 [ext_resource path="res://Player/1P1.gd" type="Script" id=6]
 [ext_resource path="res://Player/HUD/Crosshair1.png" type="Texture" id=7]
 [ext_resource path="res://Player/HUD/GunSprites2.png" type="Texture" id=8]
+[ext_resource path="res://SFX/Machinegun-Submachinegun-Fire25B.wav" type="AudioStream" id=9]
+[ext_resource path="res://SFX/Machinegun-Submachinegun-Fire16B.wav" type="AudioStream" id=10]
+[ext_resource path="res://SFX/Assault Rifle 1.wav" type="AudioStream" id=11]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 0.01
 
 [sub_resource type="CapsuleShape" id=2]
 
-[sub_resource type="Animation" id=3]
-resource_name = "Idle"
+[sub_resource type="Animation" id=17]
+resource_name = "PR_Idle"
+step = 0.125
 tracks/0/type = "value"
-tracks/0/path = NodePath("Gun:frame")
+tracks/0/path = NodePath("GunSwitchable:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -27,6 +31,155 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "PR_Out"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "PR_Reload"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 2, 2, 2, 0 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "PR_Shoot"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 0, 0 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "Pistol_Idle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "Pistol_Out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "Pistol_Reload"
+length = 2.0
+step = 0.16
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.32, 0.48, 0.64, 0.8, 0.96, 1.12, 1.28, 1.44, 1.6, 1.76, 1.92 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12, 13, 13, 13, 13, 13, 13, 13, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Pistol_Shoot"
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 15, 8, 8, 8, 8, 8, 8, 8 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "Pump_Idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 16 ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Pump_Out"
+
+[sub_resource type="Animation" id=27]
+resource_name = "Pump_Reload"
+
+[sub_resource type="Animation" id=28]
+resource_name = "Pump_Shoot"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 17, 18, 18, 18, 18, 18, 18, 18, 18, 16 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -43,22 +196,84 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("GunSwitchable:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
 
-[sub_resource type="Animation" id=5]
-resource_name = "Shoot"
-length = 1.125
-step = 0.125
+[sub_resource type="Animation" id=29]
+resource_name = "Sniper_Idle"
+length = 0.5
+step = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Gun:frame")
+tracks/0/path = NodePath("GunSwitchable:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 5, 0, 0, 1, 2, 3, 4, 1, 0 ]
+"values": [ 24 ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "Sniper_Out"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 27, 28 ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "Sniper_Reload"
+length = 2.0
+step = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 28 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "Sniper_Shoot"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("GunSwitchable:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 25, 26, 24, 24, 24 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -282,7 +497,6 @@ position = Vector2( 1467, 634 )
 texture = ExtResource( 8 )
 hframes = 8
 vframes = 4
-frame = 24
 
 [node name="Helmet" type="Sprite" parent="HUD"]
 modulate = Color( 1, 1, 1, 0.54902 )
@@ -298,9 +512,23 @@ texture = ExtResource( 5 )
 hframes = 10
 
 [node name="AnimationPlayerGun" type="AnimationPlayer" parent="HUD"]
-anims/Idle = SubResource( 3 )
+anims/PR_Idle = SubResource( 17 )
+anims/PR_Out = SubResource( 18 )
+anims/PR_Reload = SubResource( 19 )
+anims/PR_Shoot = SubResource( 20 )
+anims/Pistol_Idle = SubResource( 21 )
+anims/Pistol_Out = SubResource( 22 )
+anims/Pistol_Reload = SubResource( 23 )
+anims/Pistol_Shoot = SubResource( 24 )
+anims/Pump_Idle = SubResource( 25 )
+anims/Pump_Out = SubResource( 26 )
+anims/Pump_Reload = SubResource( 27 )
+anims/Pump_Shoot = SubResource( 28 )
 anims/RESET = SubResource( 4 )
-anims/Shoot = SubResource( 5 )
+anims/Sniper_Idle = SubResource( 29 )
+anims/Sniper_Out = SubResource( 30 )
+anims/Sniper_Reload = SubResource( 31 )
+anims/Sniper_Shoot = SubResource( 32 )
 
 [node name="AnimationPlayerHealth" type="AnimationPlayer" parent="HUD"]
 anims/10 = SubResource( 6 )
@@ -315,9 +543,6 @@ anims/80 = SubResource( 14 )
 anims/90 = SubResource( 15 )
 anims/RESET = SubResource( 16 )
 
-[node name="ShootSound" type="AudioStreamPlayer" parent="HUD"]
-stream = ExtResource( 4 )
-
 [node name="ReloadSound" type="AudioStreamPlayer" parent="HUD"]
 stream = ExtResource( 1 )
 volume_db = -5.244
@@ -327,3 +552,17 @@ position = Vector2( 960, 540 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 7 )
 hframes = 3
+
+[node name="ShootSounds" type="Node" parent="."]
+
+[node name="PulseRifle" type="AudioStreamPlayer" parent="ShootSounds"]
+stream = ExtResource( 9 )
+
+[node name="Pistol" type="AudioStreamPlayer" parent="ShootSounds"]
+stream = ExtResource( 4 )
+
+[node name="PumpShotgun" type="AudioStreamPlayer" parent="ShootSounds"]
+stream = ExtResource( 10 )
+
+[node name="Sniper" type="AudioStreamPlayer" parent="ShootSounds"]
+stream = ExtResource( 11 )

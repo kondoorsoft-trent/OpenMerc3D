@@ -221,6 +221,12 @@ window/stretch/aspect="keep"
 
 enabled=PoolStringArray( "res://addons/qodot/plugin.cfg" )
 
+[global]
+
+Frame=false
+Refr=false
+FPS=false
+
 [input]
 
 rightP1={

@@ -12,6 +12,12 @@ onready var healthText = $HUD/HealthCurrent #TODO
 onready var areaText = $HUD/AreaLabel #TODO
 onready var gunSprite = $HUD/Gun #TODO
 onready var AngleOfFreedom = 80
+onready var currentWeapon = 4
+onready var shootPulseRifle = $ShootSounds/PulseRifle
+onready var shootPistol = $ShootSounds/Pistol
+onready var shootPumpShotgun = $ShootSounds/PumpShotgun
+onready var shootSniper = $ShootSounds/Sniper
+
 var camXSens = .1
 var camYSens = .1
 var moveSpeedDefault = 10
@@ -77,11 +83,31 @@ func _physics_process(delta):
 		camera1.set_perspective(fov, viewDistanceNear, viewDistanceFar)
 		moveSpeed = moveSpeedDefault
 	
+	if currentWeapon == 0:
+		pass
+	if currentWeapon == 1: #Pulse Rifle
+		if Input.is_action_pressed("shootP1") && !AnimationPlayerGun.is_playing():
+			AnimationPlayerGun.play("PR_Shoot")
+			shootSniper.play()
+			
+
+	if currentWeapon == 2: #Pistol
+		if Input.is_action_just_pressed("shootP1") && !AnimationPlayerGun.is_playing():
+			AnimationPlayerGun.play("Pistol_Shoot")
+			shootPistol.play()
+	if currentWeapon == 3: #Pump Shotgun
+		if Input.is_action_just_pressed("shootP1") && !AnimationPlayerGun.is_playing():
+			AnimationPlayerGun.play("Pump_Shoot")
+			shootPumpShotgun.play()
+	if currentWeapon == 4: #Sniper Rifle
+		if Input.is_action_just_pressed("shootP1") && !AnimationPlayerGun.is_playing():
+			AnimationPlayerGun.play("Sniper_Shoot")
+			shootSniper.play()
 	
-		
-	if Input.is_action_just_pressed("shootP1") && !AnimationPlayerGun.is_playing():
-		AnimationPlayerGun.play("Shoot")
-		ShootSound.play()
-		ReloadSound.play()
+	
+	
+	
+	
+	
 		
 	

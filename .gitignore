@@ -1,1 +1,9 @@
+# Project Files
 .import
+
+# Mono
+.mono
+
+# MacOS 
+.DS_store
+

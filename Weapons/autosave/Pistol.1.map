@@ -1,0 +1,231 @@
+// Game: Co-OpFPS
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures/Metal023;textures/Metal026;textures/Metal028;textures/Metal035;textures/Metal038;textures/Pipe002"
+// brush 0
+{
+( -48 16 16 ) ( -48 17 16 ) ( -48 16 17 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -64 40 16 ) ( -64 40 17 ) ( -63 40 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -64 16 16 ) ( -63 16 16 ) ( -64 17 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( 64 144 52 ) ( 64 145 52 ) ( 65 144 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( 64 60 48 ) ( 65 60 48 ) ( 64 60 49 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 144 48 ) ( -32 144 49 ) ( -32 145 48 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 1
+{
+( -48 32 96 ) ( -48 64 48 ) ( -48 64 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -48 96 ) ( -48 -48 48 ) ( -48 -48 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 60 ) ( -48 32 60 ) ( -32 32 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 84 ) ( -48 32 84 ) ( -48 64 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 52 96 ) ( -48 52 48 ) ( -32 52 48 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -32 64 96 ) ( -32 32 48 ) ( -32 32 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 2
+{
+( -32 64 80 ) ( -32 60 84 ) ( -32 -48 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -48 80 ) ( -28 60 80 ) ( -32 64 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 80 ) ( -28 60 80 ) ( -32 60 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0.40000153 0 0 0.1 0.1
+( -32 60 84 ) ( -28 60 80 ) ( -32 -48 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0.7670746 -0.23292542 0 0.1 0.1
+( -32 -48 84 ) ( -28 60 80 ) ( -32 -48 80 ) Metal028/Metal028_1K_Color_Dark_Grey -0.94701576 0.38266754 0 0.1 0.1
+}
+// brush 3
+{
+( -44 -68 84 ) ( -44 -48 76 ) ( -44 -48 84 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -36 -68 84 ) ( -44 -68 76 ) ( -44 -68 84 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -36 -48 76 ) ( -44 -68 76 ) ( -36 -68 76 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -36 -48 84 ) ( -44 -68 84 ) ( -44 -48 84 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -36 -48 84 ) ( -44 -48 76 ) ( -36 -48 76 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -36 -48 84 ) ( -36 -68 76 ) ( -36 -68 84 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+}
+// brush 4
+{
+( -48 64 80 ) ( -48 60 96 ) ( -48 60 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 60 96 ) ( -32 60 96 ) ( -32 60 56 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -32 60 56 ) ( -32 64 56 ) ( -48 64 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 64 80 ) ( -32 64 80 ) ( -32 60 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 56 ) ( -32 64 80 ) ( -48 64 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 60 96 ) ( -32 64 80 ) ( -32 64 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 5
+{
+( -36 48 100 ) ( -36 48 96 ) ( -36 52 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 48 100 ) ( -32 48 100 ) ( -32 48 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 48 96 ) ( -32 52 96 ) ( -36 52 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 48 100 ) ( -36 48 100 ) ( -36 52 96 ) Metal028/Metal028_1K_Color_Green 0 0 0 0.1 0.1
+( -32 48 100 ) ( -32 52 96 ) ( -32 48 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 6
+{
+( -48 48 100 ) ( -48 48 96 ) ( -48 52 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 48 100 ) ( -44 48 100 ) ( -44 48 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -44 48 96 ) ( -44 52 96 ) ( -48 52 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -44 48 100 ) ( -48 48 100 ) ( -48 52 96 ) Metal028/Metal028_1K_Color_Green 0 0 0 0.1 0.1
+( -44 48 100 ) ( -44 52 96 ) ( -44 48 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 7
+{
+( -32 64 80 ) ( -32 -48 80 ) ( -32 -48 76 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 80 ) ( -28 60 80 ) ( -32 -48 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 60 76 ) ( -28 60 80 ) ( -32 64 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0.40000153 0 0 0.1 0.1
+( -32 -48 76 ) ( -28 60 80 ) ( -32 60 76 ) Metal028/Metal028_1K_Color_Dark_Grey 0.7670746 -0.23292542 0 0.1 0.1
+( -32 -48 80 ) ( -28 60 80 ) ( -32 -48 76 ) Metal028/Metal028_1K_Color_Dark_Grey -0.94701576 0.052986145 0 0.1 0.1
+}
+// brush 8
+{
+( -48 -36 60 ) ( -48 52 56 ) ( -48 52 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -36 60 ) ( -48 -36 56 ) ( -48 -36 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 52 56 ) ( -48 -36 56 ) ( -32 -36 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 52 60 ) ( -48 -36 60 ) ( -48 52 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 52 60 ) ( -48 52 56 ) ( -32 52 56 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -32 52 60 ) ( -32 -36 56 ) ( -32 -36 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 9
+{
+( -48 -36 56 ) ( -48 -36 60 ) ( -48 -44 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -44 60 ) ( -32 -36 56 ) ( -48 -36 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 -36 60 ) ( -32 -36 60 ) ( -32 -44 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -36 56 ) ( -32 -36 60 ) ( -48 -36 60 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -44 60 ) ( -32 -36 60 ) ( -32 -36 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 10
+{
+( -48 40 44 ) ( -48 40 52 ) ( -48 32 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 32 52 ) ( -32 40 44 ) ( -48 40 44 ) Metal028/Metal028_1K_Color_Dark_Grey 0 -0.79999924 0 0.1 0.1
+( -48 40 52 ) ( -32 40 52 ) ( -32 32 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 40 44 ) ( -32 40 52 ) ( -48 40 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 32 52 ) ( -32 40 52 ) ( -32 40 44 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 11
+{
+( -48 40 24 ) ( -48 32 16 ) ( -48 40 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 32 16 ) ( -48 40 24 ) ( -32 40 24 ) Metal028/Metal028_1K_Color_Dark_Grey 0 -0.79999924 0 0.1 0.1
+( -48 40 16 ) ( -32 32 16 ) ( -32 40 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 40 24 ) ( -48 40 16 ) ( -32 40 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 32 16 ) ( -32 40 24 ) ( -32 40 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 12
+{
+( -48 32 56 ) ( -48 40 52 ) ( -48 40 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 32 56 ) ( -48 32 52 ) ( -48 32 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 40 52 ) ( -48 32 52 ) ( -32 32 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 40 56 ) ( -48 32 56 ) ( -48 40 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 40 56 ) ( -48 40 52 ) ( -32 40 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 40 56 ) ( -32 32 52 ) ( -32 32 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 13
+{
+( -40 44 96 ) ( -40 -48 92 ) ( -40 -48 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -40 -48 92 ) ( -32 -48 88 ) ( -32 -48 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -40 44 96 ) ( -32 44 96 ) ( -40 -48 92 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -48 84 ) ( -32 44 84 ) ( -40 44 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 44 84 ) ( -32 44 96 ) ( -40 44 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -40 -48 92 ) ( -32 44 96 ) ( -32 -48 88 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 -48 88 ) ( -32 44 96 ) ( -32 44 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 14
+{
+( -48 -48 88 ) ( -48 44 84 ) ( -48 44 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -40 -48 92 ) ( -48 -48 88 ) ( -48 44 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -40 -48 92 ) ( -48 -48 84 ) ( -48 -48 88 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -40 44 96 ) ( -40 -48 92 ) ( -48 44 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 -48 84 ) ( -40 44 84 ) ( -48 44 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 44 84 ) ( -40 44 96 ) ( -48 44 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -40 44 96 ) ( -40 -48 84 ) ( -40 -48 92 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 15
+{
+( -48 44 96 ) ( -48 52 84 ) ( -48 52 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 44 96 ) ( -48 44 84 ) ( -48 44 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 52 76 ) ( -48 44 76 ) ( -32 44 76 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -32 52 96 ) ( -48 44 96 ) ( -48 52 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 60 96 ) ( -48 60 84 ) ( -32 60 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 52 96 ) ( -32 44 84 ) ( -32 44 96 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 16
+{
+( -48 -48 80 ) ( -52 60 80 ) ( -48 -48 84 ) Metal028/Metal028_1K_Color_Dark_Grey -0.61732864 0.38266754 0 0.1 0.1
+( -52 60 80 ) ( -48 60 84 ) ( -48 -48 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0.7670746 -0.23292542 0 0.1 0.1
+( -52 60 80 ) ( -48 64 80 ) ( -48 60 84 ) Metal028/Metal028_1K_Color_Dark_Grey 0.40000153 0 0 0.1 0.1
+( -48 -48 80 ) ( -48 64 80 ) ( -52 60 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 60 84 ) ( -48 64 80 ) ( -48 -48 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 17
+{
+( -48 -48 76 ) ( -52 60 80 ) ( -48 -48 80 ) Metal028/Metal028_1K_Color_Dark_Grey -0.61732864 0.052986145 0 0.1 0.1
+( -48 -48 76 ) ( -48 60 76 ) ( -52 60 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0.7670746 -0.23292542 0 0.1 0.1
+( -48 60 76 ) ( -48 64 80 ) ( -52 60 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0.40000153 0 0 0.1 0.1
+( -52 60 80 ) ( -48 64 80 ) ( -48 -48 80 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 -48 80 ) ( -48 64 80 ) ( -48 60 76 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 18
+{
+( -44 16 56 ) ( -44 20 44 ) ( -44 20 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 16 56 ) ( -44 16 44 ) ( -44 16 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 20 40 ) ( -44 16 40 ) ( -36 16 40 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 20 56 ) ( -44 16 56 ) ( -44 20 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 20 56 ) ( -44 20 44 ) ( -36 20 44 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 20 56 ) ( -36 16 44 ) ( -36 16 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 19
+{
+( -44 16 40 ) ( -44 16 44 ) ( -44 12 40 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -44 16 44 ) ( -36 16 44 ) ( -36 12 40 ) Metal028/Metal028_1K_Color_Dark_Grey 0 -0.5999985 0 0.1 0.1
+( -36 12 40 ) ( -36 16 40 ) ( -44 16 40 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 16 40 ) ( -36 16 44 ) ( -44 16 44 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 12 40 ) ( -36 16 44 ) ( -36 16 40 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 20
+{
+( -44 40 16 ) ( -44 60 12 ) ( -44 60 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 40 16 ) ( -44 40 12 ) ( -44 40 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 12 ) ( -44 40 12 ) ( -36 40 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 16 ) ( -44 40 16 ) ( -44 60 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 56 16 ) ( -44 56 12 ) ( -36 56 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 16 ) ( -36 40 12 ) ( -36 40 16 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 21
+{
+( -48 40 12 ) ( -48 60 8 ) ( -48 60 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 36 12 ) ( -44 36 8 ) ( -44 36 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 8 ) ( -44 40 8 ) ( -36 40 8 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 12 ) ( -44 40 12 ) ( -44 60 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 12 ) ( -44 60 8 ) ( -36 60 8 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 60 12 ) ( -32 40 8 ) ( -32 40 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 22
+{
+( -48 36 8 ) ( -48 36 12 ) ( -48 32 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 32 12 ) ( -32 36 8 ) ( -48 36 8 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0.41176605 0 0.1 0.1
+( -48 36 12 ) ( -32 36 12 ) ( -32 32 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 36 8 ) ( -32 36 12 ) ( -48 36 12 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 32 12 ) ( -32 36 12 ) ( -32 36 8 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 23
+{
+( -44 52 76 ) ( -44 60 56 ) ( -44 60 76 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 52 76 ) ( -44 52 56 ) ( -44 52 76 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 56 ) ( -44 52 56 ) ( -36 52 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 76 ) ( -44 52 76 ) ( -44 60 76 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 76 ) ( -44 60 56 ) ( -36 60 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -36 60 76 ) ( -36 52 56 ) ( -36 52 76 ) Pipe002/Pipe002_1K_Color 0 0 90 0.1 0.1
+}
+// brush 24
+{
+( -48 40 56 ) ( -48 64 52 ) ( -48 64 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 40 56 ) ( -48 40 52 ) ( -48 40 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 52 ) ( -48 40 52 ) ( -32 40 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 56 ) ( -48 40 56 ) ( -48 64 56 ) Metal028/Metal028_1K_Color 0 0 0 0.1 0.1
+( -32 60 56 ) ( -48 60 52 ) ( -32 60 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 64 56 ) ( -32 40 52 ) ( -32 40 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+// brush 25
+{
+( -48 60 56 ) ( -48 60 52 ) ( -48 64 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 60 56 ) ( -32 60 56 ) ( -32 60 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -48 64 56 ) ( -32 64 56 ) ( -32 60 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 60 52 ) ( -32 64 56 ) ( -48 64 56 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+( -32 60 56 ) ( -32 64 56 ) ( -32 60 52 ) Metal028/Metal028_1K_Color_Dark_Grey 0 0 0 0.1 0.1
+}
+}

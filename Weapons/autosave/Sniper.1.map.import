@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Sniper.1.map-e2502fa42a45d0521df9d87e7fcb4170.tres"
+
+[deps]
+
+source_file="res://Weapons/autosave/Sniper.1.map"
+dest_files=[ "res://.import/Sniper.1.map-e2502fa42a45d0521df9d87e7fcb4170.tres" ]
+
+[params]
+

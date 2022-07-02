@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Pump Shotgun.1.map-1b135f3ea666578e202a32c9990feb56.tres"
+
+[deps]
+
+source_file="res://Weapons/autosave/Pump Shotgun.1.map"
+dest_files=[ "res://.import/Pump Shotgun.1.map-1b135f3ea666578e202a32c9990feb56.tres" ]
+
+[params]
+

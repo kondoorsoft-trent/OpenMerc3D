@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Pistol-XP.map-f1ea8e980d9f4cf2dbf37802f508afb6.tres"
+
+[deps]
+
+source_file="res://Weapons/Pistol-XP.map"
+dest_files=[ "res://.import/Pistol-XP.map-f1ea8e980d9f4cf2dbf37802f508afb6.tres" ]
+
+[params]
+

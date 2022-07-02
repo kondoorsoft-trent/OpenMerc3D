@@ -1,0 +1,18 @@
+[remap]
+
+importer="hterrain_packed_texture_importer"
+type="StreamTexture"
+path.s3tc="res://.import/slot3_albedo_bump.packed_tex-71d9be87cc5ae382f8f6802782d9e46b.s3tc.stex"
+path.etc="res://.import/slot3_albedo_bump.packed_tex-71d9be87cc5ae382f8f6802782d9e46b.etc.stex"
+
+[deps]
+
+source_file="res://Maps/Mars Goblin Facility hterrain/slot3_albedo_bump.packed_tex"
+dest_files=[ "res://.import/slot3_albedo_bump.packed_tex-71d9be87cc5ae382f8f6802782d9e46b.s3tc.stex", "res://.import/slot3_albedo_bump.packed_tex-71d9be87cc5ae382f8f6802782d9e46b.etc.stex" ]
+
+[params]
+
+compress/mode=2
+flags/repeat=1
+flags/filter=true
+flags/mipmaps=true

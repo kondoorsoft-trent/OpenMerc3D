@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Pistol.map-7f6a65753a45d8f09b1c2a9a383e54fb.tres"
+
+[deps]
+
+source_file="res://Weapons/Pistol.map"
+dest_files=[ "res://.import/Pistol.map-7f6a65753a45d8f09b1c2a9a383e54fb.tres" ]
+
+[params]
+

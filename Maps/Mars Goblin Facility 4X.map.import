@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Mars Goblin Facility 4X.map-9c7e0332a29da70bd8f650b9426f5cbe.tres"
+
+[deps]
+
+source_file="res://Maps/Mars Goblin Facility 4X.map"
+dest_files=[ "res://.import/Mars Goblin Facility 4X.map-9c7e0332a29da70bd8f650b9426f5cbe.tres" ]
+
+[params]
+

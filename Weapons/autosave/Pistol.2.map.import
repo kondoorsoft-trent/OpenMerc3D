@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Pistol.2.map-bd2aa4f7a74fbccdbefb855782bee418.tres"
+
+[deps]
+
+source_file="res://Weapons/autosave/Pistol.2.map"
+dest_files=[ "res://.import/Pistol.2.map-bd2aa4f7a74fbccdbefb855782bee418.tres" ]
+
+[params]
+

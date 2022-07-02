@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Pump Shotgun-XP.map-3d8e5ee8a529bac72fab7df51281a4a0.tres"
+
+[deps]
+
+source_file="res://Weapons/Pump Shotgun-XP.map"
+dest_files=[ "res://.import/Pump Shotgun-XP.map-3d8e5ee8a529bac72fab7df51281a4a0.tres" ]
+
+[params]
+

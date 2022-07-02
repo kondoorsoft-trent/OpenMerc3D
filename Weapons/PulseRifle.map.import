@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/PulseRifle.map-d0b7587ca28df0646576766eb0822e56.tres"
+
+[deps]
+
+source_file="res://Weapons/PulseRifle.map"
+dest_files=[ "res://.import/PulseRifle.map-d0b7587ca28df0646576766eb0822e56.tres" ]
+
+[params]
+

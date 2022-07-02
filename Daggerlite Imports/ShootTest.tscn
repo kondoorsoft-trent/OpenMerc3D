@@ -1,0 +1,475 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Daggerlite Imports/Player.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=30]
+height = 1.75
+
+[sub_resource type="Animation" id=13]
+resource_name = "Holy Fireball"
+length = 0.8
+loop = true
+step = 0.125
+
+[sub_resource type="Animation" id=2]
+resource_name = "Magic Fire"
+length = 1.5
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25, 1.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle_frame"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Sword Swing"
+length = 0.5
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/Sprite2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/Sprite2:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "0"
+
+[sub_resource type="Animation" id=18]
+resource_name = "10"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "100"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "20"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "30"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "40"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "50"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "60"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "70"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "80"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "90"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+
+[sub_resource type="Animation" id=28]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Control/HealthBar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 9 ]
+}
+
+[sub_resource type="Theme" id=31]
+
+[sub_resource type="Theme" id=10]
+
+[sub_resource type="Theme" id=7]
+
+[sub_resource type="Theme" id=12]
+
+[sub_resource type="BoxShape" id=29]
+
+[node name="Player" type="KinematicBody"]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 8.3519e-23, -3.65073e-30, 0, -4.37114e-08, -1, -8.3519e-23, 1, -4.37114e-08, 0, -0.980029, 0 )
+shape = SubResource( 30 )
+
+[node name="RayCast" type="RayCast" parent="."]
+enabled = true
+cast_to = Vector3( 0, 0, -2000 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Holy Fireball" = SubResource( 13 )
+"anims/Magic Fire" = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+anims/idle_frame = SubResource( 4 )
+
+[node name="AnimationPlayerSword" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 15 )
+"anims/Sword Swing" = SubResource( 14 )
+anims/idle = SubResource( 16 )
+
+[node name="AnimationPlayerHealthBar" type="AnimationPlayer" parent="."]
+anims/0 = SubResource( 17 )
+anims/10 = SubResource( 18 )
+anims/100 = SubResource( 19 )
+anims/20 = SubResource( 20 )
+anims/30 = SubResource( 21 )
+anims/40 = SubResource( 22 )
+anims/50 = SubResource( 23 )
+anims/60 = SubResource( 24 )
+anims/70 = SubResource( 25 )
+anims/80 = SubResource( 26 )
+anims/90 = SubResource( 27 )
+anims/RESET = SubResource( 28 )
+
+[node name="Camera" type="Camera" parent="."]
+current = true
+fov = 94.0
+far = 768.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+
+[node name="HealthBar" type="Sprite" parent="CanvasLayer/Control"]
+position = Vector2( -417, -151 )
+hframes = 10
+frame = 9
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/Control"]
+position = Vector2( -200.25, -227.75 )
+scale = Vector2( 0.851682, 0.865714 )
+hframes = 3
+frame = 1
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Control"]
+position = Vector2( 216, -63 )
+hframes = 4
+
+[node name="BarTop" type="ColorRect" parent="CanvasLayer/Control"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = -428.0
+margin_top = -480.0
+margin_right = 404.0
+margin_bottom = -463.0
+rect_scale = Vector2( 0.217501, 1.22367 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="BarLeft" type="ColorRect" parent="CanvasLayer/Control"]
+margin_left = -466.0
+margin_top = -31.0
+margin_right = -325.0
+margin_bottom = 2.0
+rect_scale = Vector2( 0.698377, 1.59861 )
+rect_pivot_offset = Vector2( 130, 33 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="BarRight" type="ColorRect" parent="CanvasLayer/Control"]
+margin_left = 211.0
+margin_top = -31.0001
+margin_right = 352.0
+margin_bottom = 1.99994
+rect_scale = Vector2( -0.685967, 0.976002 )
+rect_pivot_offset = Vector2( 130, 33 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BarTopRight" type="ColorRect" parent="CanvasLayer/Control"]
+modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 181.0
+margin_top = -478.0
+margin_right = 427.0
+margin_bottom = -410.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="GameFeed" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = 185.0
+margin_top = -475.0
+margin_right = 425.0
+margin_bottom = -414.0
+theme = SubResource( 31 )
+bbcode_enabled = true
+bbcode_text = "feedLine4
+feedLine3
+feedLine2
+feedLine1"
+text = "feedLine4
+feedLine3
+feedLine2
+feedLine1"
+
+[node name="HealthCurrent" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = -425.0
+margin_top = -51.0
+margin_right = -339.0
+margin_bottom = 23.0
+theme = SubResource( 10 )
+custom_colors/default_color = Color( 0.705882, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "10 "
+text = "10 "
+
+[node name="HealthMax" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = -425.0
+margin_top = -21.0
+margin_right = -299.0
+margin_bottom = 10.0
+theme = SubResource( 7 )
+custom_colors/default_color = Color( 0.592157, 0.592157, 0.592157, 1 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = -427.0
+margin_top = -478.0
+margin_right = -248.0
+margin_bottom = -458.0
+theme = SubResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Test Area [/center]"
+text = " Test Area "
+
+[node name="Money" type="RichTextLabel" parent="CanvasLayer/Control"]
+margin_left = 313.0
+margin_top = -28.0
+margin_right = 455.0
+margin_bottom = 16.0
+theme = SubResource( 12 )
+custom_colors/default_color = Color( 0.886275, 0.788235, 0.396078, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]100[/center]"
+text = "100"
+
+[node name="TouchMeFront" type="RayCast" parent="."]
+transform = Transform( 1, 8.3519e-23, -3.65073e-30, 0, -4.37114e-08, -1, -8.3519e-23, 1, -4.37114e-08, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, -1.2, 0 )
+debug_shape_custom_color = Color( 1, 0.305882, 0, 1 )
+
+[node name="MagicSound" type="AudioStreamPlayer" parent="."]
+
+[node name="SwordSound" type="AudioStreamPlayer" parent="."]
+volume_db = -4.402
+pitch_scale = 1.4
+
+[node name="SwordConnectSound" type="AudioStreamPlayer" parent="."]
+
+[node name="SwordZone" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.31629 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="SwordZone"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0, 0, 0 )
+shape = SubResource( 29 )
+
+[connection signal="animation_finished" from="AnimationPlayerSword" to="." method="_on_AnimationPlayerSword_animation_finished"]
+[connection signal="body_entered" from="SwordZone" to="." method="_on_Area_body_entered"]

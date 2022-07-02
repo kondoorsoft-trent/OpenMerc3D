@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Gun-Drop29.wav-9ccf5044932d3025ed4d333047466e89.sample"
+
+[deps]
+
+source_file="res://SFX/Gun-Drop29.wav"
+dest_files=[ "res://.import/Gun-Drop29.wav-9ccf5044932d3025ed4d333047466e89.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player/3dCharacterController-master/3dCC.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/TestEnvironment.gd" type="Script" id=2]
+[ext_resource path="res://Player/3dCharacterController-P2/3dCC.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/3dCharacterController-P2/3dCC.gd" type="Script" id=5]
+
+[sub_resource type="ProceduralSky" id=5]
+sky_top_color = Color( 0.843137, 0.505882, 0.321569, 1 )
+sky_horizon_color = Color( 1, 0.882353, 0.701961, 1 )
+sun_color = Color( 1, 0.741176, 0.529412, 1 )
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 5 )
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 30, 2, 30 )
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( -15, 1, 15, 15, 1, 15, -15, -1, 15, 15, 1, 15, 15, -1, 15, -15, -1, 15, 15, 1, -15, -15, 1, -15, 15, -1, -15, -15, 1, -15, -15, -1, -15, 15, -1, -15, 15, 1, 15, 15, 1, -15, 15, -1, 15, 15, 1, -15, 15, -1, -15, 15, -1, 15, -15, 1, -15, -15, 1, 15, -15, -1, -15, -15, 1, 15, -15, -1, 15, -15, -1, -15, 15, 1, 15, -15, 1, 15, 15, 1, -15, -15, 1, 15, -15, 1, -15, 15, 1, -15, -15, -1, 15, 15, -1, 15, -15, -1, -15, 15, -1, 15, 15, -1, -15, -15, -1, -15 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
+
+[node name="FloorTest" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.18701, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../MarginContainer/GridContainer/ViewportContainer/Viewport/P1")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="FloorTest"]
+
+[node name="CollisionShape" type="CollisionShape" parent="FloorTest/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.347509, 0.937677, 0, -0.937677, 0.347509, 0, 6.72144, 0 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+columns = 2
+
+[node name="ViewportContainer" type="ViewportContainer" parent="MarginContainer/GridContainer"]
+margin_right = 958.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="MarginContainer/GridContainer/ViewportContainer"]
+size = Vector2( 958, 1080 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="P1" parent="MarginContainer/GridContainer/ViewportContainer/Viewport" instance=ExtResource( 1 )]
+transform = Transform( -0.772035, 0, -0.63558, 0, 1, 0, 0.63558, 0, -0.772035, 6.27476, 1.4158, 1.19805 )
+
+[node name="ViewportContainer2" type="ViewportContainer" parent="MarginContainer/GridContainer"]
+margin_left = 962.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="MarginContainer/GridContainer/ViewportContainer2"]
+size = Vector2( 958, 1080 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="P2" parent="MarginContainer/GridContainer/ViewportContainer2/Viewport" instance=ExtResource( 4 )]
+script = ExtResource( 5 )
+move_speed = 10
+acceleration = 0.5

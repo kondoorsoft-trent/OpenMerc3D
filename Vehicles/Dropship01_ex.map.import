@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/Dropship01_ex.map-65531b1b5a12c9d15c56c72180e59385.tres"
+
+[deps]
+
+source_file="res://Vehicles/Dropship01_ex.map"
+dest_files=[ "res://.import/Dropship01_ex.map-65531b1b5a12c9d15c56c72180e59385.tres" ]
+
+[params]
+

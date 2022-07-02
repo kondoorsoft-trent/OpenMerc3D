@@ -1,0 +1,8 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "#ffffffff",
+		"rgb": "#ff8888ff"
+	}
+}

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/AUTO-Machinegun-Submachinegun-Fire26.wav-1c9b5f103d08bf4f0deb0522b11355d9.sample"
+
+[deps]
+
+source_file="res://SFX/AUTO-Machinegun-Submachinegun-Fire26.wav"
+dest_files=[ "res://.import/AUTO-Machinegun-Submachinegun-Fire26.wav-1c9b5f103d08bf4f0deb0522b11355d9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

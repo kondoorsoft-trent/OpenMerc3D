@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Body fall Metal 07.wav-171881c04496eb2da6cb4af0551c36e7.sample"
+
+[deps]
+
+source_file="res://SFX/Body fall Metal 07.wav"
+dest_files=[ "res://.import/Body fall Metal 07.wav-171881c04496eb2da6cb4af0551c36e7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

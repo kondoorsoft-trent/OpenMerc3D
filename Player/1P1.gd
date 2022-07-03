@@ -12,11 +12,12 @@ onready var healthText = $HUD/HealthCurrent #TODO
 onready var areaText = $HUD/AreaLabel #TODO
 onready var gunSprite = $HUD/Gun #TODO
 onready var AngleOfFreedom = 80
-onready var currentWeapon = 4
+onready var currentWeapon = 2
 onready var shootPulseRifle = $ShootSounds/PulseRifle
 onready var shootPistol = $ShootSounds/Pistol
 onready var shootPumpShotgun = $ShootSounds/PumpShotgun
 onready var shootSniper = $ShootSounds/Sniper
+onready var interactLabel = $HUD/InteractLabel
 
 var camXSens = .1
 var camYSens = .1
@@ -28,12 +29,31 @@ var viewDistanceFar = 100
 var verticalGravityMultiplier = 40
 var jump_speed = 15
 
+var weaponPickupId = 0
+var canPickUpWeapon = false
+
+
+
+
+
 onready var gameFeed = $CanvasLayer/Control/GameFeed
 var vertical_velocity = Vector3.DOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	interactLabel.set_bbcode("")
 	camera1.set_perspective(fov, viewDistanceNear, viewDistanceFar)
+	if currentWeapon == 0:
+		AnimationPlayerGun.play("PR_Idle")
+	if currentWeapon == 1:
+		AnimationPlayerGun.play("PR_Idle")
+	if currentWeapon == 2:
+		AnimationPlayerGun.play("Pistol_Idle")
+	if currentWeapon == 3:
+		AnimationPlayerGun.play("Pump_Idle")
+	if currentWeapon == 4:
+		AnimationPlayerGun.play("Sniper_Idle")
+
 
 func _physics_process(delta):
 	var velocity = Input.get_vector("leftP1", "rightP1", "forwardP1", "backP1")
@@ -50,8 +70,7 @@ func _physics_process(delta):
 	
 	if (is_on_floor()):
 		vertical_velocity = Vector3.ZERO
-		
-
+	
 	#BUTTON INPUTS
 	
 	if Input.is_action_pressed("lookUpP1"):
@@ -66,7 +85,6 @@ func _physics_process(delta):
 	if Input.is_action_pressed("lookRightP1"):
 		var lookIntensity = Input.get_action_strength("lookRightP1")
 		rotate_y(lookIntensity * camYSens * -1)
-		
 	var camera_rot = $HeadHitbox/Camera.rotation_degrees
 	camera_rot.x = clamp(camera_rot.x,  (AngleOfFreedom * -1) - 90, AngleOfFreedom - 90)
 	$HeadHitbox/Camera.rotation_degrees = camera_rot
@@ -94,7 +112,6 @@ func _physics_process(delta):
 		if Input.is_action_pressed("shootP1") && !AnimationPlayerGun.is_playing():
 			AnimationPlayerGun.play("PR_Shoot")
 			shootSniper.play()
-			
 
 	if currentWeapon == 2: #Pistol
 		if Input.is_action_just_pressed("shootP1") && !AnimationPlayerGun.is_playing():
@@ -110,9 +127,39 @@ func _physics_process(delta):
 			shootSniper.play()
 	
 	
+	if canPickUpWeapon && Input.is_action_just_pressed("interactP1"):
+			pickUpGun(weaponPickupId)
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+func pickUpGun(var newGunId):
+	currentWeapon = newGunId
+	if currentWeapon == 0:
+		AnimationPlayerGun.play("PR_Idle")
+	if currentWeapon == 1:
+		AnimationPlayerGun.play("PR_Idle")
+	if currentWeapon == 2:
+		AnimationPlayerGun.play("Pistol_Idle")
+	if currentWeapon == 3:
+		AnimationPlayerGun.play("Pump_Idle")
+	if currentWeapon == 4:
+		AnimationPlayerGun.play("Sniper_Idle")
 		
-	
+func setInteractLabel(var newText):
+	interactLabel.set_bbcode("[center] " + String(newText) + "[/center]")
+func clearInteractLabel():
+	interactLabel.set_bbcode("")
+
+func setPickup(var newWeaponId):
+	canPickUpWeapon = true
+	weaponPickupId = newWeaponId
+func clearPickup():
+	canPickUpWeapon = false
+	weaponPickupId = 0

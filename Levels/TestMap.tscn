@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://Player/1P1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/qodot/src/nodes/qodot_map.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://textures/Rock011/Rock011_1K_Color.jpg" type="Texture" id=8]
 [ext_resource path="res://textures/Ground051/Ground051_1K_Color.jpg" type="Texture" id=9]
 [ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=10]
+[ext_resource path="res://Weapons/PulseRifle - Pickup.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ProceduralSky" id=1]
 sky_top_color = Color( 0.54902, 0.819608, 0.968627, 1 )
@@ -612,3 +613,6 @@ shadow_enabled = true
 
 [node name="OverheadCamera" type="Camera" parent="."]
 transform = Transform( 0.87462, -0.24056, 0.420918, -0.0611127, 0.806581, 0.587956, -0.480943, -0.539961, 0.69075, 15.4974, 19.3192, 14.3289 )
+
+[node name="StaticBody" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.298008, 0.954563, 0, -0.954563, 0.298008, 0, 0, 0, 1, 1.54703, 2.14452, 0 )

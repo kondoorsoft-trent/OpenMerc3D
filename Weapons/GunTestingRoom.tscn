@@ -19,7 +19,7 @@ background_color = Color( 0.6, 0.6, 0.6, 1 )
 environment = SubResource( 2 )
 
 [node name="PulseRifle" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.794499, 0, 0.607265, 0, 1, 0, -0.607265, 0, 0.794499, 1.47261, -1.64481, 0 )
+transform = Transform( 0.794499, 0, 0.607265, 0, 1, 0, -0.607265, 0, 0.794499, -1.18788, -1.63666, -2.38127 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.932262, 0.166593, 0.321146, -0.0360684, -0.840451, 0.540685, 0.359982, -0.515644, -0.777512, 0.459172, 0.199209, -0.693667 )
@@ -29,13 +29,13 @@ shadow_color = Color( 0.72549, 0.72549, 0.72549, 1 )
 shadow_contact = 0.297
 
 [node name="Pistol" parent="." instance=ExtResource( 3 )]
-transform = Transform( -0.665191, 0, 0.746673, 0, 1, 0, -0.746673, 0, -0.665191, 1.88883, -1.77829, -0.856388 )
+transform = Transform( -0.665191, 0, 0.746673, 0, 1, 0, -0.746673, 0, -0.665191, 2.63253, -1.89722, 0.11111 )
 
 [node name="DB Shotgun" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.700336, 0, -0.713813, 0, 1, 0, 0.713813, 0, 0.700336, 3.21652, -1.81268, -3.29969 )
 
 [node name="Sniper" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.633043, 0, -0.774117, 0, 1, 0, 0.774117, 0, 0.633043, 5.536, -2.605, -5.302 )
+transform = Transform( 0.633043, 0, -0.774117, 0, 1, 0, 0.774117, 0, 0.633043, 12.9913, -1.70877, 0.57194 )
 
 [node name="PumpShotgun" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.734915, 0, 0.67816, 0, 1, 0, -0.67816, 0, 0.734915, 12.7225, -1.75415, -12.38 )
+transform = Transform( 0.734915, 0, 0.67816, 0, 1, 0, -0.67816, 0, 0.734915, 5.00484, -1.06828, -21.6232 )

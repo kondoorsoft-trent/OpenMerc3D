@@ -34,8 +34,6 @@ var canPickUpWeapon = false
 
 
 
-
-
 onready var gameFeed = $CanvasLayer/Control/GameFeed
 var vertical_velocity = Vector3.DOWN
 
@@ -59,7 +57,7 @@ func _physics_process(delta):
 	var velocity = Input.get_vector("leftP1", "rightP1", "forwardP1", "backP1")
 	velocity = velocity.normalized()
 	var velocity3D = Vector3(velocity.x , 0, velocity.y)
-	velocity3D = velocity3D.rotated(Vector3(0, 1, 0), rotation.y)
+	velocity3D = velocity3D.rotated(Vector3.UP, rotation.y)
 	velocity.x = velocity3D.x
 	velocity.y = velocity3D.z
 	move_and_collide(Vector3(velocity.x, 0, velocity.y) * moveSpeed * delta)

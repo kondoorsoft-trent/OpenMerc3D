@@ -68,6 +68,9 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera1.rotate_x(-event.relative.y * mouse_sensitivity)
+		var camera_rot = camera1.rotation_degrees
+		camera_rot.x = clamp(camera_rot.x,  (AngleOfFreedom * -1) - 90, AngleOfFreedom - 90)
+		camera1.rotation_degrees = camera_rot
 
 func _physics_process(delta):
 	var velocity = Input.get_vector("leftP1", "rightP1", "forwardP1", "backP1")

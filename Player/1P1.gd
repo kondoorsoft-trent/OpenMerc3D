@@ -31,14 +31,17 @@ var jump_speed = 15
 
 var weaponPickupId = 0
 var canPickUpWeapon = false
-
-
+var mouse_sensitivity = 0.01
 
 onready var gameFeed = $CanvasLayer/Control/GameFeed
 var vertical_velocity = Vector3.DOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# Hide & capture mouse
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	get_tree().set_input_as_handled()
+
 	interactLabel.set_bbcode("")
 	camera1.set_perspective(fov, viewDistanceNear, viewDistanceFar)
 	if currentWeapon == 0:
@@ -52,6 +55,19 @@ func _ready():
 	if currentWeapon == 4:
 		AnimationPlayerGun.play("Sniper_Idle")
 
+func _input(event):
+	# unlock the mouse when player wants to leave the game window
+	if event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().set_input_as_handled()
+	# capture the mouse again after leaving the game window
+	if event.is_action_pressed("click") && Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		get_tree().set_input_as_handled()
+	# rotate camera to mouse position
+	if event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * mouse_sensitivity)
+		camera1.rotate_x(-event.relative.y * mouse_sensitivity)
 
 func _physics_process(delta):
 	var velocity = Input.get_vector("leftP1", "rightP1", "forwardP1", "backP1")
@@ -67,7 +83,7 @@ func _physics_process(delta):
 	vertical_velocity = move_and_slide_with_snap(vertical_velocity, Vector3.ZERO, Vector3.UP, true)
 	
 	if (is_on_floor()):
-		vertical_velocity = Vector3.ZERO
+		vertical_velocity = Vector3.ZERO	
 	
 	#BUTTON INPUTS
 	

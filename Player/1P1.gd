@@ -61,7 +61,7 @@ func _input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().set_input_as_handled()
 	# capture the mouse again after leaving the game window
-	if event.is_action_pressed("click") && Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+	if event.is_action_pressed("shootP1") && Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		get_tree().set_input_as_handled()
 	# rotate camera to mouse position

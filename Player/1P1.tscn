@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://SFX/Gun-Drop29.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/HUD/HelmetOutline.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 height = 0.01
 
 [sub_resource type="CapsuleShape" id=2]
+radius = 1.04488
 
 [sub_resource type="Animation" id=6]
 resource_name = "10"
@@ -472,6 +473,9 @@ font_data = ExtResource( 12 )
 [sub_resource type="Theme" id=34]
 default_font = SubResource( 33 )
 
+[sub_resource type="CapsuleShape" id=35]
+radius = 1.11043
+
 [node name="1Player1" type="KinematicBody"]
 script = ExtResource( 6 )
 
@@ -598,3 +602,12 @@ stream = ExtResource( 10 )
 
 [node name="Sniper" type="AudioStreamPlayer" parent="ShootSounds"]
 stream = ExtResource( 11 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="BodyHitbox2" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 35 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

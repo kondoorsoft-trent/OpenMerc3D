@@ -30,11 +30,12 @@ var verticalGravityMultiplier = 40
 var jump_speed = 15
 
 var weaponPickupId = 0
-var canPickUpWeapon = false
-var mouse_sensitivity = 0.01
+var mouse_sensitivity = 0.005
 
 onready var gameFeed = $CanvasLayer/Control/GameFeed
 var vertical_velocity = Vector3.DOWN
+
+var current_weapon: Node = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -144,16 +145,24 @@ func _physics_process(delta):
 			shootSniper.play()
 	
 	
-	if canPickUpWeapon && Input.is_action_just_pressed("interactP1"):
-			pickUpGun(weaponPickupId)
+	if current_weapon && Input.is_action_just_pressed("interactP1"):
+		pickUpGun(weaponPickupId)
+		current_weapon.pick_up_and_despawn()
 	
+func _on_Area_body_entered(body: Node):
+	if (body.has_method('pick_up_and_despawn')):
+		var InteractLabel = body.get('InteractLabel')
+		var WeaponID = body.get('WeaponID')
+		
+		current_weapon = body
+		interactLabel.set_bbcode("[center] " + String(InteractLabel) + "[/center]")
+		weaponPickupId = WeaponID
 	
-	
-	
-	
-	
-	
-	
+func _on_Area_body_exited(body: Node):
+	if (body.has_method('pick_up_and_despawn')):
+		current_weapon = null
+		interactLabel.set_bbcode("")
+		weaponPickupId = 0
 	
 	
 func pickUpGun(var newGunId):
@@ -168,15 +177,3 @@ func pickUpGun(var newGunId):
 		AnimationPlayerGun.play("Pump_Idle")
 	if currentWeapon == 4:
 		AnimationPlayerGun.play("Sniper_Idle")
-		
-func setInteractLabel(var newText):
-	interactLabel.set_bbcode("[center] " + String(newText) + "[/center]")
-func clearInteractLabel():
-	interactLabel.set_bbcode("")
-
-func setPickup(var newWeaponId):
-	canPickUpWeapon = true
-	weaponPickupId = newWeaponId
-func clearPickup():
-	canPickUpWeapon = false
-	weaponPickupId = 0

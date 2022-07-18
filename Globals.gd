@@ -5,11 +5,11 @@ var p2Name = 'Player 2'
 var p3Name = 'Player 3'
 var p4Name = 'Player 4'
 
-var feedLine1 = 'Player 1 absolutely demolished Player 2'
-var feedLine2 = 'Picked up a silenced pistol'
-var feedLine3 = 'Player 3 is on a KILLING SPREE'
-var feedLine4 = 'Troop Transporter has respawned'
-var feedLine5 = 'Player 3: This is a terrible game'
+var feedLine1 = ''
+var feedLine2 = ''
+var feedLine3 = ''
+var feedLine4 = ''
+var feedLine5 = ''
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

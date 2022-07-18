@@ -207,6 +207,7 @@ _global_script_class_icons={
 [application]
 
 config/name="OpenMerc3D"
+run/main_scene="res://UI/Title.tscn"
 config/icon="res://icon.png"
 
 [autoload]

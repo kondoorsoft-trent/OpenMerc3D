@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://SFX/Gun-Drop29.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/HUD/HelmetOutline.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://SFX/Machinegun-Submachinegun-Fire16B.wav" type="AudioStream" id=10]
 [ext_resource path="res://SFX/Assault Rifle 1.wav" type="AudioStream" id=11]
 [ext_resource path="res://Fonts/Ubuntu-M.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=13]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 0.01
@@ -463,9 +464,21 @@ tracks/0/keys = {
 "values": [ 25, 26, 24, 24, 24 ]
 }
 
+[sub_resource type="DynamicFont" id=35]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="Theme" id=36]
+default_font = SubResource( 35 )
+
 [sub_resource type="DynamicFont" id=33]
-size = 36
-outline_color = Color( 0.443137, 0.184314, 0.184314, 1 )
+size = 24
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 12 )
@@ -473,8 +486,9 @@ font_data = ExtResource( 12 )
 [sub_resource type="Theme" id=34]
 default_font = SubResource( 33 )
 
-[sub_resource type="CapsuleShape" id=35]
-radius = 1.11043
+[sub_resource type="CapsuleShape" id=37]
+radius = 1.5
+height = 1.4
 
 [node name="1Player1" type="KinematicBody"]
 script = ExtResource( 6 )
@@ -521,7 +535,7 @@ vframes = 4
 
 [node name="Helmet" type="Sprite" parent="HUD"]
 modulate = Color( 1, 1, 1, 0.54902 )
-position = Vector2( 6, -5 )
+position = Vector2( -1, 0 )
 scale = Vector2( 2, 1 )
 texture = ExtResource( 2 )
 offset = Vector2( 480, 540 )
@@ -584,10 +598,28 @@ margin_left = -195.5
 margin_top = -217.0
 margin_right = 195.5
 margin_bottom = -125.0
-theme = SubResource( 34 )
+theme = SubResource( 36 )
 bbcode_enabled = true
 bbcode_text = "[center]Press X to pick up Goblin[/center]"
 text = "Press X to pick up Goblin"
+
+[node name="TextFeed" type="RichTextLabel" parent="HUD"]
+margin_left = 6.0
+margin_top = 353.0
+margin_right = 625.0
+margin_bottom = 740.0
+theme = SubResource( 34 )
+bbcode_enabled = true
+bbcode_text = "Line 1
+Line 2
+Line 3
+Line 4
+Line 5"
+text = "Line 1
+Line 2
+Line 3
+Line 4
+Line 5"
 
 [node name="ShootSounds" type="Node" parent="."]
 
@@ -606,8 +638,8 @@ stream = ExtResource( 11 )
 [node name="Area" type="Area" parent="."]
 
 [node name="BodyHitbox2" type="CollisionShape" parent="Area"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-shape = SubResource( 35 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.38419e-07, 0.0965461, -0.0093596 )
+shape = SubResource( 37 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

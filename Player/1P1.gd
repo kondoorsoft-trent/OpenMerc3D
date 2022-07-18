@@ -18,6 +18,7 @@ onready var shootPistol = $ShootSounds/Pistol
 onready var shootPumpShotgun = $ShootSounds/PumpShotgun
 onready var shootSniper = $ShootSounds/Sniper
 onready var interactLabel = $HUD/InteractLabel
+onready var textFeed = $HUD/TextFeed
 
 var camXSens = .1
 var camYSens = .1
@@ -144,10 +145,13 @@ func _physics_process(delta):
 			AnimationPlayerGun.play("Sniper_Shoot")
 			shootSniper.play()
 	
-	
 	if current_weapon && Input.is_action_just_pressed("interactP1"):
 		pickUpGun(weaponPickupId)
 		current_weapon.pick_up_and_despawn()
+	
+	#Update Text Feed
+	textFeed.set_bbcode("- " + Globals.feedLine1 + '\n' + "- " + Globals.feedLine2 + '\n' + "- " + Globals.feedLine3 + '\n' + "- " + Globals.feedLine4 + '\n' + "- " + Globals.feedLine5 + '\n')
+	
 	
 func _on_Area_body_entered(body: Node):
 	if (body.has_method('pick_up_and_despawn')):

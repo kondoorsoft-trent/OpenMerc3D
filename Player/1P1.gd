@@ -2,8 +2,6 @@ extends KinematicBody
 
 onready var AnimationPlayerGun = $HUD/AnimationPlayerGun
 onready var animationPlayerHealthBar = $HUD/AnimationPlayerHealth
-onready var ShootSound = $HUD/ShootSound
-onready var ReloadSound = $HUD/ReloadSound
 
 onready var raycast = $HeadHitbox/Camera/RayCast
 onready var camera1 = $HeadHitbox/Camera

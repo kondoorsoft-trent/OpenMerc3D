@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Logo 2.png" type="Texture" id=1]
+[ext_resource path="res://textures/Rock028/Rock028_1K_Color.jpg" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 540.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="Sprite2" type="Sprite" parent="Control"]
+position = Vector2( 960.5, 540 )
+scale = Vector2( 1.88965, 1.06836 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Control"]
+texture = ExtResource( 1 )
+offset = Vector2( 960, 200 )
